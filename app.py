@@ -2,9 +2,9 @@ import streamlit as st
 import pandas as pd
 import joblib
 
-model = joblib.load('model\LRG_heart_model.pkl')
-scaler = joblib.load('model\heart_scaler.pkl')
-expected_columns = joblib.load('model\heart_columns.pkl')
+model = joblib.load('model/LRG_heart_model.pkl')
+scaler = joblib.load('model/heart_scaler.pkl')
+expected_columns = joblib.load('model/heart_columns.pkl')
 
 st.title('Heart Stroke Prediction by Nayan❤️')
 st.markdown('Provide the following details')
