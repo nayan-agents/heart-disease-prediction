@@ -2,21 +2,22 @@
 
 A machine learning project that predicts the likelihood of heart disease based on patient health-related features.
 
-This project was developed as part of my machine learning practice to understand the complete workflow of data preprocessing, exploratory data analysis, model training, evaluation, and deployment using Flask.
+This project was developed as a learning project to understand and implement an end-to-end machine learning workflow, including data preprocessing, exploratory data analysis, model training, evaluation, and building an interactive prediction application using Streamlit.
 
 ## Project Overview
 
-The goal of this project is to build a machine learning model that can classify whether a person is likely to have heart disease based on the provided health attributes.
+The goal of this project is to build a machine learning model that can predict whether a person is likely to have heart disease based on the provided health attributes.
 
-The project includes:
+The project covers:
 
+- Data cleaning and preprocessing
 - Exploratory Data Analysis (EDA)
-- Data preprocessing and cleaning
+- Feature preparation
 - Feature scaling
 - Machine learning model training
 - Model evaluation
-- Saving the trained model using Pickle
-- Flask-based web application for predictions
+- Saving the trained model and preprocessing components
+- Building an interactive web application using Streamlit
 
 ## Project Structure
 
@@ -48,12 +49,12 @@ heart-disease-prediction/
 - NumPy
 - Scikit-learn
 - Jupyter Notebook
-- Flask
-- HTML/CSS
+- Streamlit
+- Pickle
 
 ## Machine Learning Workflow
 
-1. Data collection and exploration
+1. Data exploration
 2. Data cleaning and preprocessing
 3. Exploratory Data Analysis
 4. Feature preparation
@@ -61,8 +62,8 @@ heart-disease-prediction/
 6. Feature scaling
 7. Model training
 8. Model evaluation
-9. Model serialization
-10. Flask integration
+9. Saving the trained model
+10. Streamlit application integration
 
 ## Installation
 
@@ -70,13 +71,24 @@ Clone the repository:
 
 ```bash
 git clone YOUR_REPOSITORY_URL
+```
+
+Navigate to the project directory:
+
+```bash
 cd heart-disease-prediction
 ```
 
-Create and activate a virtual environment:
+Create a virtual environment:
 
 ```bash
 python -m venv .venv
+```
+
+Activate it on Windows:
+
+```bash
+.venv\Scripts\activate
 ```
 
 Install the required dependencies:
@@ -87,27 +99,32 @@ pip install -r requirements.txt
 
 ## Running the Application
 
-Run the Flask application:
+Start the Streamlit application:
 
 ```bash
-python app.py
+streamlit run app.py
 ```
 
-Then open the local address displayed by Flask in your browser.
+Streamlit will provide a local URL that you can open in your browser.
 
-## Model
+## Model Files
 
-The trained model, scaler, and required feature information are stored inside the `model/` directory and loaded by the Flask application to generate predictions.
+The `model/` directory contains the trained machine learning model and preprocessing components required by the application:
+
+- `LRG_heart_model.pkl` — trained prediction model
+- `heart_scaler.pkl` — fitted feature scaler
+- `heart_columns.pkl` — feature information required for prediction
+
+These files are loaded by `app.py` when generating predictions.
 
 ## Future Improvements
 
 - Compare additional machine learning algorithms
 - Perform hyperparameter tuning
-- Improve model evaluation
-- Improve the web interface
-- Deploy the application publicly
 - Add model explainability
+- Improve the Streamlit user interface
+- Deploy the application publicly
 
 ## Disclaimer
 
-This project is intended for educational and machine learning practice purposes only. It is not a medical diagnostic tool and should not be used for medical decision-making.
+This project was created for educational and machine learning practice purposes only. It is not intended to provide medical diagnoses or replace professional medical advice.
